@@ -48,7 +48,7 @@ app.delete('/teas/:id', (req, res) => {
   if (index === -1) {
     return res.status(404).send("Not Found!")
   }
-  teaData.splice(index, 1)
+  teaData.splice(index, 1) // splice deleted for index to index+1 from the array
   return res.status(204).send('Deleted')
 })
 
